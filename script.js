@@ -43,7 +43,7 @@ const app = {
     login: async () => {
         const input = document.getElementById('auth-code');
         const code = input.value;
-       // await app.load(); 
+        await app.load(); 
         
         const userIndex = db.users.findIndex(u => u.code === code);
         if (userIndex !== -1) {
